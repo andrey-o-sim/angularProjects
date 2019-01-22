@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { DataStorageService } from "../shared/data-storage.service";
 import { Subscription } from "rxjs";
 import { Response } from "@angular/http";
+import { AuthService } from "../auth/auth.service";
 
 @Component({
   selector: "app-header",
@@ -10,7 +11,10 @@ import { Response } from "@angular/http";
 export class HeaderComponent {
   private subscription: Subscription;
 
-  constructor(private dataStorageService: DataStorageService) {}
+  constructor(
+    private dataStorageService: DataStorageService,
+    private authService: AuthService
+  ) {}
 
   onSaveData() {
     this.subscription = this.dataStorageService
@@ -20,5 +24,9 @@ export class HeaderComponent {
 
   onFetchData() {
     this.dataStorageService.getRecipese();
+  }
+
+  onLogout() {
+    this.authService.logout();
   }
 }
