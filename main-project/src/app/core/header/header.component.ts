@@ -22,6 +22,10 @@ export class HeaderComponent {
       .subscribe((response: Response) => console.log(response));
   }
 
+  isAuthenticated() {
+    return this.authService.isAuthenticated();
+  }
+
   onFetchData() {
     this.dataStorageService.getRecipese();
   }

@@ -14,21 +14,21 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <ng-template [ngIf]="!authService.isAuthenticated()">
-          <li *ngIf="!authService.isAuthenticated()">
+        <ng-template [ngIf]="!isAuthenticated()">
+          <li *ngIf="!isAuthenticated()">
             <a routerLink="/signup">Register</a>
           </li>
-          <li *ngIf="!authService.isAuthenticated()">
+          <li *ngIf="!isAuthenticated()">
             <a routerLink="/signin">Sign In</a>
           </li>
         </ng-template>
         <li>
           <a style="cursor:pointer"
              (click)="onLogout()"
-             *ngIf="authService.isAuthenticated()">Sign Out</a>
+             *ngIf="isAuthenticated()">Sign Out</a>
         </li>
         <li class="dropdown"
-            *ngIf="authService.isAuthenticated()"
+            *ngIf="isAuthenticated()"
             appDropdown>
           <a style="cursor: pointer"
              class="dropdown-toggle"
