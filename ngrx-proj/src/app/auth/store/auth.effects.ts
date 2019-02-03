@@ -10,7 +10,7 @@ import { Router } from "@angular/router";
 @Injectable()
 export class AuthEffects {
   // https://angular-2-training-book.rangle.io/handout/state-management/ngrx/side_effects.html
-  // Side Effects нуден для работы с ассинхронными операциями (это как redux-thunk middleware в реакте).
+  // Side Effects нужен для работы с ассинхронными операциями (это как redux-thunk middleware в реакте).
   // @Effect() это декоратор, который нужно задавать для каждой side effect переменной
   // actions$ это список всех actions нашего приложения
   // Когда выполняется action - AuthAction.TRY_SIGNUP, мы его перехватываем и идем по observables
