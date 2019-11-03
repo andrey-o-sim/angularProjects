@@ -1,0 +1,17 @@
+<div class="root">
+  <p>Test Property is: {{ testProperty }}</p>
+  <p>Fn: {{ obj.fn }}</p>
+  <p>Ln: {{ obj.ln }}</p>
+  <div style="width: 50%; float: left;">
+    <app-component-aa
+      [testProperty]="testProperty"
+      [obj]="obj"
+    ></app-component-aa>
+  </div>
+  <div style="width: 50%; float: left;">
+    <app-component-ab
+      [testProperty]="testProperty"
+      [obj]="obj"
+    ></app-component-ab>
+  </div>
+</div>
